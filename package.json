@@ -2,6 +2,7 @@
   "name": "movie-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/ArsenMamataliev/Movie-todo-app",
   "dependencies": {
     "@auth0/auth0-react": "^1.2.0",
     "@testing-library/jest-dom": "^5.11.6",
@@ -16,7 +17,7 @@
     "redux": "^4.0.5",
     "web-vitals": "^0.2.4"
   },
-"homepage": "https://github.com/ArsenMamataliev/Movie-todo",
+
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
