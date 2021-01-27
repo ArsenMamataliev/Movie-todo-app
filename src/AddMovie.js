@@ -1,27 +1,15 @@
 import React, {useContext, useState} from 'react';
 import {MovieContext} from './MovieContext';
 
-const styles = {
-    name: {
-        border: 'none',
-        borderBottom: '2px solid black',
-        marginRight: '20px',
-        marginBottom: '30px',
-        width: '300px'
-     }, 
-     price: {
-        border: 'none',
-        borderBottom: '2px solid black',
-        marginRight: '20px',
-        marginBottom: '30px',
-        width: '180px'
-    },
-};
-
 const AddMovie = () => {
-    const {movies, setMovies, totalPrice, setTotalPrice} = useContext(MovieContext);
+    const {setMovies, totalPrice, setTotalPrice} = useContext(MovieContext);
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
+    
+    const randomNumberGenerator = () => {
+        const randomNumber = Math.floor((Math.random() * 1000));
+        return randomNumber;
+    };
 
     const updateName = e => {
         setName(e.target.value); 
@@ -34,7 +22,7 @@ const AddMovie = () => {
 
     const addMovieFn = e => {
         e.preventDefault();
-        setMovies(preVal => [...preVal, {name: name, price: price, id: movies.length + 1 }]);
+        setMovies(preVal => [...preVal, {name: name, price: price, id: randomNumberGenerator(), completed: false }]);
         setTotalPrice(totalPrice + +price );
         setName('');
         setPrice('');
@@ -42,9 +30,19 @@ const AddMovie = () => {
 
     return(
         <form onSubmit = {addMovieFn}>
-        <input type = 'text'  placeholder = 'Name of movie' value = {name} onChange = {updateName} style = {styles.name} maxlength = "30" required/>
-        <input type = 'number'  placeholder = 'Price' value = {price} onChange = {updatePrice} style = {styles.price} min = "0" required/>
-        <button type = "submit" className="btn btn-success">Add</button>
+            <div className="form-row">
+                <div className="col-md-12 mb-1">
+                <input type = 'text'  className = "form-control" placeholder = 'Name of movie' value = {name} onChange = {updateName} maxLength = "40" required/>
+                </div>
+            </div>
+            <div className="form-row">
+                <div className="col-md-3 mb-2">
+                    <input type = 'number' className = "form-control" placeholder = 'Price' value = {price} onChange = {updatePrice}  min = "1" required/>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <button type = "submit" className="btn btn-dark">+</button>
+                </div>
+            </div>
         </form>
     )
 }
