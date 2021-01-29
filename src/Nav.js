@@ -17,7 +17,7 @@ const Nav = () => {
                 <p><FcCheckmark/><strong>  {movies.length}</strong></p>
             </div>
             <div className="p-2 bd-highlight">
-                 <p><RiMoneyDollarCircleLine/><strong>  {totalPrice}</strong></p>
+                <p><RiMoneyDollarCircleLine/><strong>  {totalPrice}</strong></p>
             </div>
         </div>
     )

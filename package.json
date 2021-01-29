@@ -1,8 +1,8 @@
 {
-  "name": "movie-app",
+  "name": "movie-todo-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/ArsenMamataliev/Movie-todo-app",
+  "homepage": "https://github.com/ArsenMamataliev/movie-todo-app",
   "dependencies": {
     "@auth0/auth0-react": "^1.2.0",
     "@testing-library/jest-dom": "^5.11.6",
