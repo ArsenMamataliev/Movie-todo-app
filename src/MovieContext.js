@@ -8,7 +8,7 @@ export const MovieProvider = props => {
     const [completedMovies, setCompletedMovies]= useState([]);
 
     const decreaseTotalPrice = price => setTotalPrice(totalPrice - Number(price));
-    
+        
     const increaseTotalPrice = price => setTotalPrice(totalPrice + Number(price));
 
     const deleteMovie = (id, price, completed) => {

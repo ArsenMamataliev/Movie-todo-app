@@ -7,41 +7,34 @@ const MovieList = () =>{
     const {movies, completedMovies} = useContext(MovieContext);
     return(
         <div>
-            <table className="table text-center small">
-                <thead>
-                    <tr>
-                    <th style={{width: "10%"}}>Status</th>
-                    <th style={{width: "70%"}}>Name</th>
-                    <th style={{width: "15%"}}>Price</th>
-                    <th style={{width: "5%"}}>Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        movies.map( movie =>(
-                        <Movie name = {movie.name} price = {movie.price}
-                        id = {movie.id} key = {movie.id} completed = {movie.completed}/>
+            {   
+                movies.length > 0? 
+                movies.map( movie =>(
+                    <Movie name = {movie.name} price = {movie.price}
+                    id = {movie.id} key = {movie.id} completed = {movie.completed}
+                    />
+                ))
+                : completedMovies.length > 0? '':<p className="d-flex justify-content-center my-10">No movies</p>
+            }
+            {
+                completedMovies.length > 0? 
+                <>
+                <div className="d-flex justify-content-center my-10">
+                    <button className="btn btn-success"
+                    onClick = {()=> setShowCompletedMovies(!showCompletedMovies)}
+                    >{showCompletedMovies? "Hide": "Show "} completed</button>
+                </div>
+                {
+                    showCompletedMovies? 
+                        completedMovies.map( movie =>(
+                            <Movie name = {movie.name} price = {movie.price}
+                            id = {movie.id} key = {movie.id} completed = {movie.completed}
+                            />
                         ))
-                    }
-                    {
-                        completedMovies.length > 0? 
-                        <>
-                        <button className="btn btn-primary" 
-                            onClick = {()=> setShowCompletedMovies(!showCompletedMovies)}
-                        >{showCompletedMovies? "Hide": "Show"}</button>
-                
-                        {
-                            showCompletedMovies? 
-                                completedMovies.map( movie =>(
-                                    <Movie name = {movie.name} price = {movie.price}
-                                id = {movie.id} key = {movie.id} completed = {movie.completed}/>
-                                ))
-                            : ''
-                        }
-                        </>: ''
-                    }
-                </tbody>
-            </table>
+                    : ''
+                }
+                </>: ''
+            }      
         </div>
     )
 }

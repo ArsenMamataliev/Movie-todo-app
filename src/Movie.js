@@ -1,23 +1,32 @@
 import React, {useContext} from 'react';
 import {MovieContext} from './MovieContext';
+import { FcOk, FcEmptyTrash, FcCheckmark} from "react-icons/fc";
 
 const statusChecked = {
+    paddingTop: '7px',
     textDecorationLine: 'line-through',
     color: 'gray'
 };
 const statusNotChecked = {
+    paddingTop: '7px',
     textDecorationLine: 'none',
+    color: 'black',
+    vertitalAlgign: 'center'
 };
 
 const Movie = ({name, price, id, completed}) => {
     const { deleteMovie, completedMovieTask} = useContext(MovieContext);
     return (
-            <tr>
-                <th><input type="checkbox" checked={completed} onChange={() => completedMovieTask(id, price, completed)}></input></th>
-                <td style = {completed? statusChecked: statusNotChecked}>{name}</td>
-                <td style = {completed? statusChecked: statusNotChecked}>${price}</td>
-                <td><button type="button" className="btn btn-danger small btn-sm" onClick = {() => deleteMovie(id, price, completed)} >&times;</button></td>
-            </tr> 
+        <div className="movie-list">
+        <div> 
+            <button className="btn btn-light" onClick={() => completedMovieTask(id, price, completed)}> {completed? <FcOk/>: <FcCheckmark/>}</button>
+        </div>
+        <div style = {completed? statusChecked: statusNotChecked}>{name}</div>
+        <div style = {completed? statusChecked: statusNotChecked}>${price}</div>
+        <div><button className="btn btn-light" onClick = {() => deleteMovie(id, price, completed)} ><FcEmptyTrash/></button></div>
+    </div>
+                
+
        
     );
 };

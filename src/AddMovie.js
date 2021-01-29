@@ -1,5 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {MovieContext} from './MovieContext';
+import { FcPlus } from "react-icons/fc";
 
 const AddMovie = () => {
     const {setMovies, totalPrice, setTotalPrice} = useContext(MovieContext);
@@ -30,18 +31,18 @@ const AddMovie = () => {
 
     return(
         <form onSubmit = {addMovieFn}>
-            <div className="form-row">
-                <div className="col-md-12 mb-1">
-                <input type = 'text'  className = "form-control" placeholder = 'Name of movie' value = {name} onChange = {updateName} maxLength = "40" required/>
-                </div>
-            </div>
-            <div className="form-row">
-                <div className="col-md-3 mb-2">
-                    <input type = 'number' className = "form-control" placeholder = 'Price' value = {price} onChange = {updatePrice}  min = "1" required/>
-                </div>
-                <div class="col-md-3 mb-2">
-                    <button type = "submit" className="btn btn-dark">+</button>
-                </div>
+            <div className="d-flex bd-highlight">
+              <div className="p-2 flex-grow-1 bd-highlight">
+                <input type = 'text'  className = "form-control"
+                placeholder = 'Name of movie' value = {name} onChange = {updateName} maxLength = "70"  required/>
+              </div>
+              <div className="p-2 bd-highlight">
+                <input type = 'number' className = "form-control"
+                placeholder = 'Price' value = {price} onChange = {updatePrice}  min = "0" max = "10000" required/>
+              </div>
+              <div className="p-2 bd-highlight">
+                <button type = "submit" className="btn btn-light"><FcPlus/></button>
+              </div>
             </div>
         </form>
     )

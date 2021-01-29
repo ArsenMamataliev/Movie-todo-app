@@ -10,16 +10,12 @@
 
 html, body {
   width: 100%;
+  background-color: #f1f2f3;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 .container{
@@ -31,20 +27,39 @@ code {
 
 .navbar{
   Width: 100%;
-  display: flex;
-  flex-direction: row;
-  padding: 10px 20px;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: black;
-  color: white;
-  margin-bottom: 15px;
-  height: 100px;
+  height: 40px;
+  color: #058131;
+  font-size: 24px;
 }
 
-.navbar p{
-  margin: 0 0 0 20px;
+.movie-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 65% 15% 10%;
+  grid-gap: 0;
+  margin: 10px 0;
+  background-color: white;
+  box-shadow: 5px 5px 5px #888888;
+}
+.movie-list:hover{
+  box-shadow: 5px 5px 5px #afa6a6;
+  transition: 1s;
+}
+
+.movie-list div{
+  vertical-align: center;
   padding: 0;
+  word-wrap: break-word;
+}
+
+.movie-list div:nth-child(2){
+  color:red;
+  margin: 0 10px;
+}
+
+.movie-list div:last-child{
+  display: flex;
+  justify-content: flex-end;
 }
 
 
@@ -52,7 +67,9 @@ code {
   .container {
     width: 100%;
     padding: 0 5px;
-    margin: 0, auto;
+    margin: 0 auto;
   }
-
+  .navbar{
+    font-size: 16px;
+  }
 }
