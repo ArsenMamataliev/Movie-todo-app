@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/ArsenMamataliev/movie-todo-app/static/css/main.a385c626.chunk.css",
-    "main.js": "/ArsenMamataliev/movie-todo-app/static/js/main.2bcbb075.chunk.js",
-    "main.js.map": "/ArsenMamataliev/movie-todo-app/static/js/main.2bcbb075.chunk.js.map",
-    "runtime-main.js": "/ArsenMamataliev/movie-todo-app/static/js/runtime-main.767e5edd.js",
-    "runtime-main.js.map": "/ArsenMamataliev/movie-todo-app/static/js/runtime-main.767e5edd.js.map",
-    "static/js/2.d9dc6181.chunk.js": "/ArsenMamataliev/movie-todo-app/static/js/2.d9dc6181.chunk.js",
-    "static/js/2.d9dc6181.chunk.js.map": "/ArsenMamataliev/movie-todo-app/static/js/2.d9dc6181.chunk.js.map",
-    "index.html": "/ArsenMamataliev/movie-todo-app/index.html",
-    "static/css/main.a385c626.chunk.css.map": "/ArsenMamataliev/movie-todo-app/static/css/main.a385c626.chunk.css.map",
-    "static/js/2.d9dc6181.chunk.js.LICENSE.txt": "/ArsenMamataliev/movie-todo-app/static/js/2.d9dc6181.chunk.js.LICENSE.txt"
+    "main.css": "/Movie-todo-app/static/css/main.a385c626.chunk.css",
+    "main.js": "/Movie-todo-app/static/js/main.2bcbb075.chunk.js",
+    "main.js.map": "/Movie-todo-app/static/js/main.2bcbb075.chunk.js.map",
+    "runtime-main.js": "/Movie-todo-app/static/js/runtime-main.7b3d53c9.js",
+    "runtime-main.js.map": "/Movie-todo-app/static/js/runtime-main.7b3d53c9.js.map",
+    "static/js/2.d9dc6181.chunk.js": "/Movie-todo-app/static/js/2.d9dc6181.chunk.js",
+    "static/js/2.d9dc6181.chunk.js.map": "/Movie-todo-app/static/js/2.d9dc6181.chunk.js.map",
+    "index.html": "/Movie-todo-app/index.html",
+    "static/css/main.a385c626.chunk.css.map": "/Movie-todo-app/static/css/main.a385c626.chunk.css.map",
+    "static/js/2.d9dc6181.chunk.js.LICENSE.txt": "/Movie-todo-app/static/js/2.d9dc6181.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.767e5edd.js",
+    "static/js/runtime-main.7b3d53c9.js",
     "static/js/2.d9dc6181.chunk.js",
     "static/css/main.a385c626.chunk.css",
     "static/js/main.2bcbb075.chunk.js"
